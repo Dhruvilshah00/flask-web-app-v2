@@ -10,21 +10,27 @@
       width: 100%;
       height: 400px;
       object-fit: cover;
+      margin-bottom: 16px;
     }
   </style>
   <title>Career site</title>
 </head>
 <body>
-  <div class="container">
-    <h1 class="text-center mt-2 mb-4">{{company_name}}'s Career Site</h1>
+  {% include 'nav.html' %}
     <img class="img-fluid" id="banner" src="static/banner.jpg">
-    <h2 class="text-center mt-2 mb-2">About Career</h2>
-    <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula nisi ac venenatis blandit. Donec vel felis quam. Vestibulum vitae gravida mauris, vitae accumsan urna. Cras rutrum pretium eros lacinia posuere. Proin lobortis quam a turpis ultrices, facilisis blandit elit condimentum. Maecenas sodales lacus laoreet, fermentum sapien sit amet, semper est. Sed in diam pellentesque, consequat elit vel, egestas tortor. Pellentesque gravida varius ex at lobortis. Quisque metus nisi, ullamcorper ac arcu at, dictum rhoncus justo. Donec egestas tincidunt diam sit amet mollis. Sed ultricies auctor mauris, ut tempor ipsum laoreet eget. Integer massa orci, ornare sit amet dapibus eu, dictum sit amet felis. Praesent tristique pretium feugiat. Maecenas vulputate nulla ac justo laoreet tempus.
-    </p>
-    <p class="lead">
-      Donec iaculis ornare libero, eu condimentum neque pharetra et. Suspendisse ac pharetra neque. Nulla viverra ex a scelerisque scelerisque. Aenean cursus vestibulum tellus. Etiam commodo ex a venenatis tempor. Donec et urna libero. Donec ultrices sed eros eget varius. Sed non est mi. Aenean id sapien sit amet lacus cursus fringilla. Nam pharetra ante ut est pellentesque gravida. Ut mattis nunc nibh, eget dapibus risus lacinia ut. In vulputate sagittis suscipit. Curabitur dignissim, ex et pretium eleifend, ipsum purus sodales enim, vel fermentum turpis justo quis elit.  
-      </p>
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Career Site</h1>
+
+    <div class="row" style="margin: 16px;">
+      <div class="col-md-6">
+        <p class="lead" style="text-align: justify;">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula nisi ac venenatis blandit. Donec vel felis quam. Vestibulum vitae gravida mauris, vitae accumsan urna. Cras rutrum pretium eros lacinia posuere. Proin lobortis quam a turpis ultrices, facilisis blandit elit condimentum. Maecenas sodales lacus laoreet, fermentum sapien sit amet, semper est. Sed in diam pellentesque, consequat elit vel, egestas tortor. Pellentesque gravida varius ex at lobortis. Quisque metus nisi, ullamcorper ac arcu at, dictum rhoncus justo. Donec egestas tincidunt diam sit amet mollis. Sed ultricies auctor mauris, ut tempor ipsum laoreet eget. Integer massa orci, ornare sit amet dapibus eu, dictum sit amet felis. Praesent tristique pretium feugiat. Maecenas vulputate nulla ac justo laoreet tempus.
+        </p>
+      </div>
+      <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.jpg" style="height: 320px; border-radius: 6px;">
+      </div>
+    </div>
   
     <h2 class="text-center mt-2 mb-2">Job Openings</h2>
     
@@ -35,11 +41,11 @@
     </div>
     
     <div class="text-center">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2023, Dhruvil Shah</p>
+      <a href="mailto:shahdhruvil.it@gmail.com?subject=Question%20about%20Job%20Openings&body=My%20Name%3A%20%3Cyour%20Name%3E%0D%0A%0D%0AMy%20Question%3A%20%3CEnter%20your%20Question%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
     </div>
 
 
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
